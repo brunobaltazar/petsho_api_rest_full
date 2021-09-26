@@ -40,11 +40,16 @@ Remove all containers. docker rm $(docker ps -aq)
 Remove all images. docker rmi $(docker images -q)
 
 .env arquivo é carregado por padrão:
+
 docker-compose --env-file .env.dev config
+
 docker-compose --env-file ./path/ .env.dev up 
 
 
 
 docker-compose down && docker-compose --env-file .env.dev up 
+
 docker-compose down && docker-compose --env-file .env.stage up
+
 docker-compose down && docker-compose --env-file .env.prod up
+
